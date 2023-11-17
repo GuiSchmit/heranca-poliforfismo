@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using herança_polimorfismo.Entities;
 
+//Inicia a lista
 List<Product> list = new List<Product>();
 
+//Coleta o dado para controle de repetições
 Console.Write("Enter the number of products: ");
 int x = int.Parse(Console.ReadLine());
 
+//Preenchimento da lista
 for (int i = 0; i < x; i++)
 {
     Console.WriteLine($"Product #{i+1} data:");
@@ -21,6 +24,7 @@ for (int i = 0; i < x; i++)
         Console.Write("Price: ");
         double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+    //Testa o tipo de produto
     if (ch == 'c')
     {
         Product p = new Product(name, price);
@@ -48,6 +52,7 @@ for (int i = 0; i < x; i++)
 
 }
 
+//Exibição dos dados coletados
 Console.WriteLine("");
 foreach (Product p in list)
 {
